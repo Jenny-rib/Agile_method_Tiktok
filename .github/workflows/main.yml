@@ -20,9 +20,9 @@ jobs:
            python -m pip install --upgrade pip 
            pip install -r requirements.txt
     
-       - name: Run linter  # 确保 flake8 先安装
+       - name: Run linter 
          run: |
-           pip install flake8  # 额外安装，确保可用
+           pip install flake8
            flake8 .
            
        - name: Run tests 
