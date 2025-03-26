@@ -2,7 +2,7 @@ name: Run Python Script
 
 on:
   push:
-    branches: [ main ]  
+    branches: [ main ]
 
 jobs:
   run-python:
@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install numpy pandas matplotlib seaborn  
+          pip install numpy pandas matplotlib seaborn
 
       - name: Run script
         run: python tiktok-popularity-track.py
