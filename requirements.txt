@@ -1,2 +1,8 @@
-pytest
-flake8
+numpy
+pandas
+matplotlib
+seaborn
+nbconvert
+nbformat
+jupyter
+
