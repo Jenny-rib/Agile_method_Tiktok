@@ -55,7 +55,7 @@ def count(df, x, ax, main_color=colors[2], second_color=colors[0]):
     ax.set_ylabel("")
 
 
-    cols = ['key', 'mode', 'time_signature']
+cols = ['key', 'mode', 'time_signature']
 
 fig, ax = plt.subplots(1, 3, figsize=(30, 7))
 
