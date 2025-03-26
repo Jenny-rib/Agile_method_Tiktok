@@ -22,5 +22,6 @@ jobs:
           pip install --upgrade pip
           pip install numpy pandas matplotlib seaborn
 
+
       - name: Run script
         run: python tiktok.py
