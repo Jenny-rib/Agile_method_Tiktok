@@ -1,27 +1,26 @@
-name: Run TikTok Notebook
+name: Run Python Script
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]  
 
 jobs:
-  execute-notebook:
+  run-python:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-    - name: Install dependencies
-      run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install numpy pandas matplotlib seaborn  
 
-    - name: Run the notebook
-      run: |
-        jupyter nbconvert --to notebook --execute tiktok-popularity-track.ipynb --output executed.ipynb
+      - name: Run script
+        run: python tiktok-popularity-track.py
